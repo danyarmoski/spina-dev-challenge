@@ -23,6 +23,7 @@ Start the application:
 docker compose up
 ```
 Then open:
+
 http://127.0.0.1:3000
 http://127.0.0.1:3000/admin
 
@@ -62,7 +63,7 @@ Run database setup manually:
 docker compose run --rm web bin/rails db:prepare
 ```
 
-Opening the Rails console: 
+Open the Rails console: 
 ```bash
 docker compose run --rm web bin/rails console
 ```
@@ -71,7 +72,7 @@ docker compose run --rm web bin/rails console
 I focused on keeping the local dev experience simple and consistent rather than trying to recreate a full production environment. 
 - Docker Compose separates the app and database so the environment is reproducible across machines
 - I added an entrypoint script to handle common setup tasks like installing dependencies and preparing the database
-- I used a persistent volume for Ruby gems so developers can install or update dependencies without rebuilding the container.
+- I used a persistent volume for Ruby gems so developers can install or update dependencies without rebuilding the container
 
 ## Known Callouts
 - This is intended for local development only 
@@ -93,5 +94,5 @@ I also used general online resources when troubleshooting Docker behavior and ap
 - Run the application in ECS or EKS
 - Use RDS for PostgreSQL
 - Store any assets inside of S3
-- Manage secrets properly using either parameter store or Secrets Manager
+- Manage secrets properly using either Parameter Store or Secrets Manager
 - Add CI/CD to build and push images, then deploy to the appropriate environment
