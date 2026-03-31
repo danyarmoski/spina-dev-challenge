@@ -25,6 +25,7 @@ docker compose up
 Then open:
 
 http://127.0.0.1:3000
+
 http://127.0.0.1:3000/admin
 
 This will also work on localhost:3000
